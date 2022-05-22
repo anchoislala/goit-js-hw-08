@@ -4,4 +4,4 @@ var t=arguments[3],n="Expected a function",e=NaN,i="[object Symbol]",r=/^\s+|\s+
 },{}],"TTyb":[function(require,module,exports) {
 "use strict";var e=t(require("lodash.throttle"));function t(e){return e&&e.__esModule?e:{default:e}}const a="feedback-form-state",r={form:document.querySelector(".feedback-form"),inputEmail:document.querySelector(".feedback-form input"),textarea:document.querySelector(".feedback-form textarea")};let n={};function o(e){e.preventDefault(),console.log(n),e.currentTarget.reset(),localStorage.removeItem(a)}function u(e){n={email:r.inputEmail.value,message:r.textarea.value},localStorage.setItem(a,JSON.stringify(n))}function l(e){const t=localStorage.getItem(a);t&&(r.inputEmail.value=JSON.parse(t).email,r.textarea.value=JSON.parse(t).message)}r.form.addEventListener("submit",o),r.inputEmail.addEventListener("input",(0,e.default)(u,500)),r.textarea.addEventListener("input",(0,e.default)(u,500)),l();
 },{"lodash.throttle":"FNyO"}]},{},["TTyb"], null)
-//# sourceMappingURL=/goit-markup-hw-08/03-feedback.9640ab12.js.map
+//# sourceMappingURL=/goit-js-hw-08/03-feedback.9640ab12.js.map
