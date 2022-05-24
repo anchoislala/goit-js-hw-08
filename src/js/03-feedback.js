@@ -20,7 +20,7 @@ function onFormSubmit(evt) {
     evt.preventDefault();
 
     if (refs.inputEmail.value === '' || refs.textarea.value === '') {
-        return Report.failure("Все поля должны быть заполнены!");     
+        return Report.failure("All fields must be filled!");     
     }
 
     console.log(inputValues);
