@@ -1,4 +1,5 @@
 import throttle from 'lodash.throttle';
+import { Report } from 'notiflix/build/notiflix-report-aio';
 
 const STORAGE_KEY = 'feedback-form-state';
 const refs = {
@@ -17,6 +18,10 @@ onValuesComplete();
 
 function onFormSubmit(evt) {
     evt.preventDefault();
+
+    if (refs.inputEmail.value === '' || refs.textarea.value === '') {
+        return Report.failure("Все поля должны быть заполнены!");     
+    }
 
     console.log(inputValues);
 
