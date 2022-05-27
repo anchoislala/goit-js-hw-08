@@ -9,7 +9,13 @@ function onPlay({ seconds }) {
   localStorage.setItem('videoplayer-current-time', seconds);
 }
 
-if (localStorage.getItem('videoplayer-current-time') !== '0') {
-  player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
+// if (localStorage.getItem('videoplayer-current-time') !== '0') {
+//   player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
+//   console.log(localStorage.getItem('videoplayer-current-time'))
+// };
+
+
+if (localStorage.getItem('videoplayer-current-time')) {
+  player.setCurrentTime(Number(localStorage.getItem('videoplayer-current-time')));
   console.log(localStorage.getItem('videoplayer-current-time'))
 };
